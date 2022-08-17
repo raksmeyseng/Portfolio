@@ -1,11 +1,10 @@
-import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/widgets/bottom_bar.dart';
 import 'package:my_portfolio/widgets/carousel.dart';
 import 'package:my_portfolio/widgets/destination_heading.dart';
+import 'package:my_portfolio/widgets/discover_heading.dart';
 import 'package:my_portfolio/widgets/explore_drawer.dart';
 import 'package:my_portfolio/widgets/featured_heading.dart';
-import 'package:my_portfolio/widgets/floating_quick_access_bar.dart';
 import 'package:my_portfolio/widgets/responsive.dart';
 import 'package:my_portfolio/widgets/web_scrollbar.dart';
 
@@ -56,22 +55,22 @@ class _HomePageState extends State<HomePage> {
               elevation: 0,
               centerTitle: true,
               actions: [
-                IconButton(
-                  icon: const Icon(Icons.brightness_6),
-                  splashColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onPressed: () {
-                    EasyDynamicTheme.of(context).changeTheme();
-                  },
-                ),
+                // IconButton(
+                //   icon: const Icon(Icons.brightness_6),
+                //   splashColor: Colors.transparent,
+                //   highlightColor: Colors.transparent,
+                //   onPressed: () {
+                //     EasyDynamicTheme.of(context).changeTheme();
+                //   },
+                // ),
                 SizedBox(width: screenSize.width / 50),
               ],
-              title: Text(
+              title: const Text(
                 'RAKSMEY SENG',
                 style: TextStyle(
-                  color: Colors.blueGrey[100],
+                  color: Colors.white,
                   fontSize: 20,
-                  fontFamily: 'Montserrat',
+                  fontFamily: 'Electrolize',
                   fontWeight: FontWeight.w400,
                   letterSpacing: 3,
                 ),
@@ -96,16 +95,30 @@ class _HomePageState extends State<HomePage> {
               Stack(
                 children: [
                   SizedBox(
-                    height: screenSize.height * 0.45,
-                    width: screenSize.width,
-                    child: Image.asset(
-                      'assets/images/cover.png',
-                      fit: BoxFit.cover,
-                    ),
-                  ),
+                      height: screenSize.height * 0.75,
+                      width: screenSize.width,
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: Alignment.topRight,
+                            end: Alignment.bottomLeft,
+                            colors: [
+                              Color.fromARGB(255, 34, 144, 158),
+                              Color.fromARGB(255, 74, 21, 75)
+                            ],
+                          ),
+                        ),
+                      )
+                      // Image.asset(
+                      //   'assets/images/cover.png',
+                      //   fit: BoxFit.cover,
+                      // ),
+                      ),
                   Column(
                     children: [
-                      FloatingQuickAccessBar(screenSize: screenSize),
+                      // FloatingQuickAccessBar(screenSize: screenSize),
+                      DiscoverHeading(screenSize: screenSize),
+                      const SizedBox(height: 20),
                       Column(
                         children: [
                           FeaturedHeading(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_portfolio/widgets/responsive.dart';
 
 class BottomBar extends StatelessWidget {
   const BottomBar({Key? key}) : super(key: key);
@@ -35,16 +36,18 @@ class BottomBar extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                Text(
-                  'RAKSMEY SENG',
-                  style: TextStyle(
-                    color: Colors.blueGrey[100],
-                    fontSize: 18,
-                    fontFamily: 'Montserrat',
-                    fontWeight: FontWeight.w400,
-                    letterSpacing: 3,
+                if (ResponsiveWidget.isLargeScreen(context)) ...[
+                  const Text(
+                    'RAKSMEY SENG',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontFamily: 'Electrolize',
+                      fontWeight: FontWeight.w400,
+                      letterSpacing: 3,
+                    ),
                   ),
-                ),
+                ],
                 const Text(
                   "CONTACT",
                   style: TextStyle(
@@ -197,7 +200,7 @@ class BottomBar extends StatelessWidget {
           Text(
             'Terms and Conditions',
             style: TextStyle(
-              color: Colors.blueGrey[300],
+              color: Colors.grey[400],
               fontSize: 14,
             ),
           ),
@@ -210,7 +213,7 @@ class BottomBar extends StatelessWidget {
           Text(
             'Privacy Policy',
             style: TextStyle(
-              color: Colors.blueGrey[300],
+              color: Colors.grey[400],
               fontSize: 14,
             ),
           ),

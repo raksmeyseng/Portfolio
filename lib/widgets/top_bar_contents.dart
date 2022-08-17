@@ -1,4 +1,3 @@
-import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:flutter/material.dart';
 
 class TopBarContents extends StatefulWidget {
@@ -36,12 +35,12 @@ class _TopBarContentsState extends State<TopBarContents> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(width: screenSize.width / 8),
-              Text(
+              const Text(
                 'RAKSMEY SENG',
                 style: TextStyle(
-                  color: Colors.blueGrey[100],
+                  color: Colors.white,
                   fontSize: 20,
-                  fontFamily: 'Montserrat',
+                  fontFamily: 'Electrolize',
                   fontWeight: FontWeight.w400,
                   letterSpacing: 3,
                 ),
@@ -197,15 +196,15 @@ class _TopBarContentsState extends State<TopBarContents> {
                   ],
                 ),
               ),
-              IconButton(
-                icon: const Icon(Icons.brightness_6),
-                splashColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                color: Colors.white,
-                onPressed: () {
-                  EasyDynamicTheme.of(context).changeTheme();
-                },
-              ),
+              // IconButton(
+              //   icon: const Icon(Icons.brightness_6),
+              //   splashColor: Colors.transparent,
+              //   highlightColor: Colors.transparent,
+              //   color: Colors.white,
+              //   onPressed: () {
+              //     EasyDynamicTheme.of(context).changeTheme();
+              //   },
+              // ),
               SizedBox(width: screenSize.width / 50),
             ],
           ),

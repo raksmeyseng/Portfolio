@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 final lightThemeData = ThemeData(
   primarySwatch: Colors.blueGrey,
   backgroundColor: Colors.white,
+  primaryColor: const Color.fromARGB(255, 74, 21, 75),
   cardColor: Colors.blueGrey[50],
   primaryTextTheme: TextTheme(
     button: TextStyle(
@@ -26,6 +27,7 @@ final lightThemeData = ThemeData(
 final darkThemeData = ThemeData(
   primarySwatch: Colors.blueGrey,
   backgroundColor: const Color.fromARGB(255, 0, 4, 24),
+  primaryColor: const Color.fromARGB(255, 74, 21, 75),
   cardColor: Colors.black,
   primaryTextTheme: TextTheme(
     button: TextStyle(

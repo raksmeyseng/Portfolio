@@ -13,9 +13,9 @@ class FeaturedHeading extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        top: screenSize.height * 0.06,
-        left: screenSize.width / 15,
-        right: screenSize.width / 15,
+        top: screenSize.height * 0.07,
+        left: screenSize.width / 10,
+        right: screenSize.width / 10,
       ),
       child: ResponsiveWidget.isSmallScreen(context)
           ? Column(

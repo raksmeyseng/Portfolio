@@ -6,12 +6,13 @@ class BottomBarColumn extends StatelessWidget {
   final String s2;
   final String s3;
 
-  BottomBarColumn({
+  const BottomBarColumn(
+    Key? key, {
     required this.heading,
     required this.s1,
     required this.s2,
     required this.s3,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

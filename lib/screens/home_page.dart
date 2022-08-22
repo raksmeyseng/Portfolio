@@ -1,3 +1,4 @@
+import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/widgets/bottom_bar.dart';
 import 'package:my_portfolio/widgets/carousel.dart';
@@ -55,14 +56,14 @@ class _HomePageState extends State<HomePage> {
               elevation: 0,
               centerTitle: true,
               actions: [
-                // IconButton(
-                //   icon: const Icon(Icons.brightness_6),
-                //   splashColor: Colors.transparent,
-                //   highlightColor: Colors.transparent,
-                //   onPressed: () {
-                //     EasyDynamicTheme.of(context).changeTheme();
-                //   },
-                // ),
+                IconButton(
+                  icon: const Icon(Icons.brightness_6),
+                  splashColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onPressed: () {
+                    EasyDynamicTheme.of(context).changeTheme();
+                  },
+                ),
                 SizedBox(width: screenSize.width / 50),
               ],
               title: const Text(
@@ -78,7 +79,7 @@ class _HomePageState extends State<HomePage> {
             )
           : PreferredSize(
               preferredSize: Size(screenSize.width, 1000),
-              child: TopBarContents(_opacity),
+              child: TopBarContents(null, opacity: _opacity),
             ),
       drawer: const ExploreDrawer(),
       body: WebScrollbar(
@@ -103,8 +104,8 @@ class _HomePageState extends State<HomePage> {
                             begin: Alignment.topRight,
                             end: Alignment.bottomLeft,
                             colors: [
-                              Color.fromARGB(255, 34, 144, 158),
-                              Color.fromARGB(255, 74, 21, 75)
+                              Color.fromARGB(255, 90, 106, 255),
+                              Color.fromARGB(255, 68, 1, 74),
                             ],
                           ),
                         ),

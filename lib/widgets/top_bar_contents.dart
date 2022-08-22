@@ -1,9 +1,13 @@
+import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:flutter/material.dart';
 
 class TopBarContents extends StatefulWidget {
   final double opacity;
 
-  TopBarContents(this.opacity);
+  const TopBarContents(
+    Key? key, {
+    required this.opacity,
+  }) : super(key: key);
 
   @override
   _TopBarContentsState createState() => _TopBarContentsState();
@@ -196,15 +200,15 @@ class _TopBarContentsState extends State<TopBarContents> {
                   ],
                 ),
               ),
-              // IconButton(
-              //   icon: const Icon(Icons.brightness_6),
-              //   splashColor: Colors.transparent,
-              //   highlightColor: Colors.transparent,
-              //   color: Colors.white,
-              //   onPressed: () {
-              //     EasyDynamicTheme.of(context).changeTheme();
-              //   },
-              // ),
+              IconButton(
+                icon: const Icon(Icons.brightness_6),
+                splashColor: Colors.transparent,
+                highlightColor: Colors.transparent,
+                color: Colors.white,
+                onPressed: () {
+                  EasyDynamicTheme.of(context).changeTheme();
+                },
+              ),
               SizedBox(width: screenSize.width / 50),
             ],
           ),

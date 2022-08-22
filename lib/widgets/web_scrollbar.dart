@@ -11,7 +11,8 @@ class WebScrollbar extends StatefulWidget {
   final Color backgroundColor;
   final bool isAlwaysShown;
 
-  WebScrollbar({
+  const WebScrollbar({
+    Key? key,
     required this.child,
     required this.controller,
     this.heightFraction = 0.20,
@@ -19,7 +20,8 @@ class WebScrollbar extends StatefulWidget {
     this.color = Colors.black45,
     this.backgroundColor = Colors.black12,
     this.isAlwaysShown = false,
-  }) : assert(heightFraction < 1.0 && heightFraction > 0.0);
+  })  : assert(heightFraction < 1.0 && heightFraction > 0.0),
+        super(key: key);
 
   @override
   _WebScrollbarState createState() => _WebScrollbarState();

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/widgets/responsive.dart';
+import 'package:my_portfolio/widgets/text_widget.dart';
 
 class FeaturedHeading extends StatelessWidget {
   const FeaturedHeading({
@@ -23,19 +24,15 @@ class FeaturedHeading extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Row(),
-                const Text(
+                const TextWidget(
                   'My Service',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontFamily: 'Montserrat',
-                    fontWeight: FontWeight.bold,
-                  ),
+                  bold: true,
+                  size: 24,
                 ),
                 const SizedBox(height: 5),
-                Text(
+                const TextWidget(
                   'What I do for customer?',
                   textAlign: TextAlign.end,
-                  style: Theme.of(context).primaryTextTheme.subtitle1,
                 ),
                 const SizedBox(height: 10),
               ],
@@ -43,20 +40,16 @@ class FeaturedHeading extends StatelessWidget {
           : Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                const Text(
+              children: const [
+                TextWidget(
                   'My Service',
-                  style: TextStyle(
-                    fontSize: 40,
-                    fontFamily: 'Montserrat',
-                    fontWeight: FontWeight.bold,
-                  ),
+                  bold: true,
+                  size: 40,
                 ),
                 Expanded(
-                  child: Text(
+                  child: TextWidget(
                     'What I do for customer?',
                     textAlign: TextAlign.end,
-                    style: Theme.of(context).primaryTextTheme.subtitle1,
                   ),
                 ),
               ],

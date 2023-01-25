@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/constants/asset_path.dart';
 import 'package:my_portfolio/widgets/responsive.dart';
+import 'package:my_portfolio/widgets/text_widget.dart';
 
 class FeaturedTiles extends StatelessWidget {
   FeaturedTiles({
@@ -10,9 +12,9 @@ class FeaturedTiles extends StatelessWidget {
   final Size screenSize;
 
   final List<String> assets = [
-    'assets/images/brand_identity.jpg',
-    'assets/images/ux_research.jpg',
-    'assets/images/web_app.jpg',
+    AssetPath.brandIdentity,
+    AssetPath.uxResearch,
+    AssetPath.webApp,
   ];
 
   final List<String> title = [
@@ -53,17 +55,8 @@ class FeaturedTiles extends StatelessWidget {
                               padding: EdgeInsets.only(
                                 top: screenSize.height / 70,
                               ),
-                              child: Text(
+                              child: TextWidget(
                                 title[pageIndex],
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontFamily: 'Montserrat',
-                                  fontWeight: FontWeight.w500,
-                                  color: Theme.of(context)
-                                      .primaryTextTheme
-                                      .subtitle1!
-                                      .color,
-                                ),
                               ),
                             ),
                           ],
@@ -103,17 +96,8 @@ class FeaturedTiles extends StatelessWidget {
                         padding: EdgeInsets.only(
                           top: screenSize.height / 70,
                         ),
-                        child: Text(
+                        child: TextWidget(
                           title[pageIndex],
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.w500,
-                            color: Theme.of(context)
-                                .primaryTextTheme
-                                .subtitle1!
-                                .color,
-                          ),
                         ),
                       ),
                     ],

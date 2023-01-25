@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/widgets/text_widget.dart';
 
 class BottomBarColumn extends StatelessWidget {
   final String heading;
-  final String s1;
-  final String s2;
-  final String s3;
+  final String season1;
+  final String season2;
+  final String season3;
 
   const BottomBarColumn(
     Key? key, {
     required this.heading,
-    required this.s1,
-    required this.s2,
-    required this.s3,
+    required this.season1,
+    required this.season2,
+    required this.season3,
   }) : super(key: key);
 
   @override
@@ -21,38 +22,17 @@ class BottomBarColumn extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          TextWidget(
             heading,
-            style: TextStyle(
-              color: Colors.blueGrey[300],
-              fontSize: 18,
-              fontWeight: FontWeight.w500,
-            ),
+            bold: true,
+            size: 18,
           ),
           const SizedBox(height: 10),
-          Text(
-            s1,
-            style: TextStyle(
-              color: Colors.blueGrey[100],
-              fontSize: 14,
-            ),
-          ),
+          TextWidget(season1),
           const SizedBox(height: 10),
-          Text(
-            s2,
-            style: TextStyle(
-              color: Colors.blueGrey[100],
-              fontSize: 14,
-            ),
-          ),
+          TextWidget(season2),
           const SizedBox(height: 10),
-          Text(
-            s3,
-            style: TextStyle(
-              color: Colors.blueGrey[100],
-              fontSize: 14,
-            ),
-          ),
+          TextWidget(season3),
         ],
       ),
     );

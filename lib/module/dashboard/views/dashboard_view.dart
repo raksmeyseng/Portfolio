@@ -1,6 +1,6 @@
-import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_portfolio/constants/app_constant.dart';
+import 'package:my_portfolio/constants/asset_path.dart';
 import 'package:my_portfolio/widgets/bottom_bar.dart';
 import 'package:my_portfolio/widgets/carousel.dart';
 import 'package:my_portfolio/widgets/destination_heading.dart';
@@ -9,19 +9,18 @@ import 'package:my_portfolio/widgets/explore_drawer.dart';
 import 'package:my_portfolio/widgets/featured_heading.dart';
 import 'package:my_portfolio/widgets/featured_tiles.dart';
 import 'package:my_portfolio/widgets/responsive.dart';
+import 'package:my_portfolio/widgets/text_widget.dart';
 import 'package:my_portfolio/widgets/top_bar_contents.dart';
 import 'package:my_portfolio/widgets/web_scrollbar.dart';
 
-class AppView extends StatefulWidget {
-  static const String route = '/';
-
-  const AppView({Key? key}) : super(key: key);
+class DashboardView extends StatefulWidget {
+  const DashboardView({Key? key}) : super(key: key);
 
   @override
-  _AppViewState createState() => _AppViewState();
+  _DashboardViewState createState() => _DashboardViewState();
 }
 
-class _AppViewState extends State<AppView> {
+class _DashboardViewState extends State<DashboardView> {
   late ScrollController _scrollController;
   double _scrollPosition = 0;
   double _opacity = 0;
@@ -55,26 +54,9 @@ class _AppViewState extends State<AppView> {
                   Theme.of(context).bottomAppBarColor.withOpacity(_opacity),
               elevation: 0,
               centerTitle: true,
-              actions: [
-                IconButton(
-                  icon: const FaIcon(FontAwesomeIcons.moon),
-                  splashColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onPressed: () {
-                    EasyDynamicTheme.of(context).changeTheme();
-                  },
-                ),
-                SizedBox(width: screenSize.width / 50),
-              ],
-              title: const Text(
-                'RAKSMEY SENG',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                  fontFamily: 'Electrolize',
-                  fontWeight: FontWeight.w400,
-                  letterSpacing: 3,
-                ),
+              title: TextWidget(
+                AppConstant.appName.toUpperCase(),
+                font: AppConstant.secondaryFonts,
               ),
             )
           : PreferredSize(
@@ -96,30 +78,15 @@ class _AppViewState extends State<AppView> {
               Stack(
                 children: [
                   SizedBox(
-                    // height: screenSize.height * 0.75,
                     height: screenSize.height,
                     width: screenSize.width,
-                    child:
-                        // Container(
-                        //   decoration: const BoxDecoration(
-                        //     gradient: LinearGradient(
-                        //       begin: Alignment.topRight,
-                        //       end: Alignment.bottomLeft,
-                        //       colors: [
-                        //         Color.fromARGB(255, 92, 255, 106),
-                        //         Color.fromARGB(255, 68, 1, 74),
-                        //       ],
-                        //     ),
-                        //   ),
-                        // )
-                        Image.asset(
-                      'assets/images/cover.png',
+                    child: Image.asset(
+                      AssetPath.cover,
                       fit: BoxFit.cover,
                     ),
                   ),
                   Column(
                     children: [
-                      // FloatingQuickAccessBar(screenSize: screenSize),
                       DiscoverHeading(screenSize: screenSize),
                     ],
                   )

@@ -9,13 +9,23 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  flutter_localizations:
+    sdk: flutter
+    
+  # Translation
+  intl: ^0.17.0
+  # State management
   flutter_bloc: ^8.1.1
+  bloc_concurrency: ^0.2.0
+  equatable: ^2.0.5
+  # Manage application routing
   go_router: ^6.0.0
-  intl: ^0.18.0
+  # Generate model
+  json_annotation: ^4.7.0
+  # Save data to local storage
+  shared_preferences: ^2.0.15
   cupertino_icons: ^1.0.2
   carousel_slider: ^4.2.1
-  easy_dynamic_theme: ^2.0.0
   font_awesome_flutter: ^10.1.0
   url_strategy: ^0.2.0
 
@@ -23,10 +33,16 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^1.0.0
+  # Generate model
+  build_runner: ^2.2.0
+  json_serializable: ^6.3.1
 
 flutter:
 
   uses-material-design: true
+  assets:
+    # Images
+    - assets/images/
 
   fonts:
     - family: Montserrat
@@ -37,6 +53,7 @@ flutter:
       fonts:
         - asset: assets/fonts/Electrolize-Regular.ttf
 
-  assets:
-    - assets/video/
-    - assets/images/
+flutter_intl:
+  enabled: true
+  arb_dir: lib/languages/l10n
+  output_dir: lib/languages/generated

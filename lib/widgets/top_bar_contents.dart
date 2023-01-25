@@ -1,6 +1,4 @@
-import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class TopBarContents extends StatefulWidget {
   final double opacity;
@@ -200,15 +198,6 @@ class _TopBarContentsState extends State<TopBarContents> {
                     ),
                   ],
                 ),
-              ),
-              IconButton(
-                icon: const FaIcon(FontAwesomeIcons.moon),
-                splashColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                color: Colors.white,
-                onPressed: () {
-                  EasyDynamicTheme.of(context).changeTheme();
-                },
               ),
               SizedBox(width: screenSize.width / 50),
             ],

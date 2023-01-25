@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/widgets/text_widget.dart';
 
 class InfoText extends StatelessWidget {
   final String type;
@@ -17,12 +18,8 @@ class InfoText extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        TextWidget(
           '$type: ',
-          style: TextStyle(
-            color: Colors.blueGrey[300],
-            fontSize: 16,
-          ),
         ),
         Flexible(
           child: Text(

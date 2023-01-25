@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/widgets/responsive.dart';
+import 'package:my_portfolio/widgets/text_widget.dart';
 
 class DestinationHeading extends StatelessWidget {
   const DestinationHeading({
@@ -19,14 +20,11 @@ class DestinationHeading extends StatelessWidget {
             ),
             width: screenSize.width,
             // color: Colors.black,
-            child: const Text(
+            child: const TextWidget(
               'Project Case Studies',
+              bold: true,
+              size: 24,
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 24,
-                fontFamily: 'Montserrat',
-                fontWeight: FontWeight.bold,
-              ),
             ),
           )
         : Container(
@@ -36,14 +34,11 @@ class DestinationHeading extends StatelessWidget {
             ),
             width: screenSize.width,
             // color: Colors.black,
-            child: const Text(
+            child: const TextWidget(
               'Project Case Studies',
+              bold: true,
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 40,
-                fontFamily: 'Montserrat',
-                fontWeight: FontWeight.bold,
-              ),
+              size: 40,
             ),
           );
   }

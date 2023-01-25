@@ -11,15 +11,9 @@ class RouteConfig {
         if (state.subloc.isEmpty) {
           return null;
         }
-
-        // If app is not loaded yet, go to splash screen first
         if (state.subloc != '/') {
           // Bundle the location the user is coming from into a query parameter
-          return '/';
-        }
-
-        if (state.subloc == '/') {
-          return null;
+          return '/?from=${state.subloc}';
         }
 
         // Go straight to the page

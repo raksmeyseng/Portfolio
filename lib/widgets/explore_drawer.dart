@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/config/themes/app_color.dart';
+import 'package:my_portfolio/widgets/text_widget.dart';
 
 class ExploreDrawer extends StatefulWidget {
   const ExploreDrawer({
@@ -24,60 +26,51 @@ class _ExploreDrawerState extends State<ExploreDrawer> {
               const SizedBox(height: 20),
               InkWell(
                 onTap: () {},
-                child: const Text(
+                child: const TextWidget(
                   'RAKSMEY SENG',
-                  style: TextStyle(color: Colors.white, fontSize: 16),
                 ),
               ),
               const SizedBox(height: 10),
-              Padding(
-                padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+              const Padding(
+                padding: EdgeInsets.only(top: 5.0, bottom: 5.0),
                 child: Divider(
-                  color: Colors.blueGrey[400],
+                  color: AppColor.divider,
                   thickness: 0.5,
                 ),
               ),
               const SizedBox(height: 10),
               InkWell(
                 onTap: () {},
-                child: const Text(
+                child: const TextWidget(
                   'Discover',
-                  style: TextStyle(color: Colors.white, fontSize: 16),
                 ),
               ),
               const SizedBox(height: 10),
               InkWell(
                 onTap: () {},
-                child: const Text(
+                child: const TextWidget(
                   'About',
-                  style: TextStyle(color: Colors.white, fontSize: 16),
                 ),
               ),
               const SizedBox(height: 10),
               InkWell(
                 onTap: () {},
-                child: const Text(
+                child: const TextWidget(
                   'Contact',
-                  style: TextStyle(color: Colors.white, fontSize: 16),
                 ),
               ),
               const SizedBox(height: 10),
               InkWell(
                 onTap: () {},
-                child: const Text(
+                child: const TextWidget(
                   'FAQ\'S',
-                  style: TextStyle(color: Colors.white, fontSize: 16),
                 ),
               ),
-              Expanded(
+              const Expanded(
                 child: Align(
                   alignment: Alignment.bottomCenter,
-                  child: Text(
+                  child: TextWidget(
                     'Copyright © 2022 Raksmey Seng',
-                    style: TextStyle(
-                      color: Colors.blueGrey[300],
-                      fontSize: 14,
-                    ),
                   ),
                 ),
               )

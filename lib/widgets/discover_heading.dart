@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_portfolio/constants/app_constant.dart';
 import 'package:my_portfolio/widgets/responsive.dart';
+import 'package:my_portfolio/widgets/text_widget.dart';
 
 class DiscoverHeading extends StatefulWidget {
   const DiscoverHeading({
@@ -30,34 +32,19 @@ class _DiscoverHeadingState extends State<DiscoverHeading> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
-          Text(
-            'Raksmey Seng',
-            style: TextStyle(
-              color: Colors.white,
-              fontFamily: 'Montserrat',
-              fontSize: 16,
-            ),
+          TextWidget(
+            AppConstant.appName,
           ),
           SizedBox(height: 20),
-          Text(
+          TextWidget(
             'Experience \nDesigner',
-            style: TextStyle(
-              color: Colors.white,
-              height: 1.2,
-              fontSize: 70,
-              fontFamily: 'Montserrat',
-              fontWeight: FontWeight.bold,
-            ),
+            bold: true,
+            size: 70,
           ),
           SizedBox(height: 20),
-          Text(
+          TextWidget(
             'I help you design a complete experience of \ninteracting with your brand which includes logo \ndesign, brand identity systems, UX Research and \nUI design for your website or Application.',
-            style: TextStyle(
-              height: 2,
-              color: Colors.white,
-              fontSize: 16,
-              fontFamily: 'Montserrat',
-            ),
+            height: 2,
           ),
           //  SizedBox(height: 130),
           // latestProjectWidget(),
@@ -77,40 +64,24 @@ class _DiscoverHeadingState extends State<DiscoverHeading> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text(
+                  const TextWidget(
                     'Latest Design \nProject.',
-                    style: TextStyle(
-                      color: Colors.white,
-                      height: 1.5,
-                      fontSize: 36,
-                      fontFamily: 'Montserrat',
-                      fontWeight: FontWeight.bold,
-                    ),
+                    bold: true,
+                    size: 36,
                   ),
                   const SizedBox(height: 30),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text(
+                      const TextWidget(
                         'View the case study and highights of latest brand identity design project for “Craft Amigo”',
-                        style: TextStyle(
-                          height: 2,
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontFamily: 'Montserrat',
-                        ),
                       ),
                       const SizedBox(height: 25),
                       Row(
                         children: const [
-                          Text(
+                          TextWidget(
                             'View Project Highlight',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 14,
-                              fontFamily: 'Montserrat',
-                            ),
                           ),
                           SizedBox(width: 16),
                           FaIcon(
@@ -136,40 +107,24 @@ class _DiscoverHeadingState extends State<DiscoverHeading> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text(
+                    const TextWidget(
                       'Latest Design \nProject.',
-                      style: TextStyle(
-                        color: Colors.white,
-                        height: 1.5,
-                        fontSize: 36,
-                        fontFamily: 'Montserrat',
-                        fontWeight: FontWeight.bold,
-                      ),
+                      bold: true,
+                      size: 36,
                     ),
                     const SizedBox(width: 30),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text(
+                        const TextWidget(
                           'View the case study and highights of latest brand identity design \nproject for “Craft Amigo”',
-                          style: TextStyle(
-                            height: 2,
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontFamily: 'Montserrat',
-                          ),
                         ),
                         const SizedBox(height: 25),
                         Row(
                           children: const [
-                            Text(
+                            TextWidget(
                               'View Project Highlight',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 14,
-                                fontFamily: 'Montserrat',
-                              ),
                             ),
                             SizedBox(width: 16),
                             FaIcon(

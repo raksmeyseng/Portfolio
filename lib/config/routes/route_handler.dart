@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:my_portfolio/module/app/views/app_bloc_page.dart';
+import 'package:my_portfolio/module/dashboard/views/dashboard_page.dart';
 
 extension ObjectExtension on Object? {
   dynamic getValue(String key, dynamic alt) {
@@ -12,7 +12,7 @@ extension ObjectExtension on Object? {
 Page dashboardBuilder(BuildContext context, GoRouterState state) {
   return MaterialPage<void>(
     key: state.pageKey,
-    child: const AppPage(),
+    child: const DashboardPage(),
   );
 }
 

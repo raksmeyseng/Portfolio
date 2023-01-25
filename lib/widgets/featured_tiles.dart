@@ -18,7 +18,7 @@ class FeaturedTiles extends StatelessWidget {
   final List<String> title = [
     'Brand Identity Design',
     'UX Research',
-    'Web/App Design'
+    'Web / App Design'
   ];
 
   @override
@@ -92,7 +92,7 @@ class FeaturedTiles extends StatelessWidget {
                         height: screenSize.width / 6,
                         width: screenSize.width / 3.8,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(5.0),
+                          borderRadius: BorderRadius.circular(10.0),
                           child: Image.asset(
                             assets[pageIndex],
                             fit: BoxFit.cover,

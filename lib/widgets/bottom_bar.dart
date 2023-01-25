@@ -41,7 +41,7 @@ class BottomBar extends StatelessWidget {
                     'RAKSMEY SENG',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 20,
+                      fontSize: 24,
                       fontFamily: 'Electrolize',
                       fontWeight: FontWeight.w400,
                       letterSpacing: 3,

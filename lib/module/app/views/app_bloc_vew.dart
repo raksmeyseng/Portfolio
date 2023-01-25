@@ -1,27 +1,27 @@
 import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_portfolio/widgets/bottom_bar.dart';
 import 'package:my_portfolio/widgets/carousel.dart';
 import 'package:my_portfolio/widgets/destination_heading.dart';
 import 'package:my_portfolio/widgets/discover_heading.dart';
 import 'package:my_portfolio/widgets/explore_drawer.dart';
 import 'package:my_portfolio/widgets/featured_heading.dart';
+import 'package:my_portfolio/widgets/featured_tiles.dart';
 import 'package:my_portfolio/widgets/responsive.dart';
+import 'package:my_portfolio/widgets/top_bar_contents.dart';
 import 'package:my_portfolio/widgets/web_scrollbar.dart';
 
-import '../widgets/featured_tiles.dart';
-import '../widgets/top_bar_contents.dart';
-
-class HomePage extends StatefulWidget {
+class AppView extends StatefulWidget {
   static const String route = '/';
 
-  const HomePage({Key? key}) : super(key: key);
+  const AppView({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _AppViewState createState() => _AppViewState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _AppViewState extends State<AppView> {
   late ScrollController _scrollController;
   double _scrollPosition = 0;
   double _opacity = 0;
@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage> {
               centerTitle: true,
               actions: [
                 IconButton(
-                  icon: const Icon(Icons.brightness_6),
+                  icon: const FaIcon(FontAwesomeIcons.moon),
                   splashColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onPressed: () {
@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                 'RAKSMEY SENG',
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 20,
+                  fontSize: 24,
                   fontFamily: 'Electrolize',
                   fontWeight: FontWeight.w400,
                   letterSpacing: 3,
@@ -96,40 +96,41 @@ class _HomePageState extends State<HomePage> {
               Stack(
                 children: [
                   SizedBox(
-                      height: screenSize.height * 0.75,
-                      width: screenSize.width,
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          gradient: LinearGradient(
-                            begin: Alignment.topRight,
-                            end: Alignment.bottomLeft,
-                            colors: [
-                              Color.fromARGB(255, 90, 106, 255),
-                              Color.fromARGB(255, 68, 1, 74),
-                            ],
-                          ),
-                        ),
-                      )
-                      // Image.asset(
-                      //   'assets/images/cover.png',
-                      //   fit: BoxFit.cover,
-                      // ),
-                      ),
+                    // height: screenSize.height * 0.75,
+                    height: screenSize.height,
+                    width: screenSize.width,
+                    child:
+                        // Container(
+                        //   decoration: const BoxDecoration(
+                        //     gradient: LinearGradient(
+                        //       begin: Alignment.topRight,
+                        //       end: Alignment.bottomLeft,
+                        //       colors: [
+                        //         Color.fromARGB(255, 92, 255, 106),
+                        //         Color.fromARGB(255, 68, 1, 74),
+                        //       ],
+                        //     ),
+                        //   ),
+                        // )
+                        Image.asset(
+                      'assets/images/cover.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                   Column(
                     children: [
                       // FloatingQuickAccessBar(screenSize: screenSize),
                       DiscoverHeading(screenSize: screenSize),
-                      const SizedBox(height: 20),
-                      Column(
-                        children: [
-                          FeaturedHeading(
-                            screenSize: screenSize,
-                          ),
-                          FeaturedTiles(screenSize: screenSize)
-                        ],
-                      ),
                     ],
                   )
+                ],
+              ),
+              Column(
+                children: [
+                  FeaturedHeading(
+                    screenSize: screenSize,
+                  ),
+                  FeaturedTiles(screenSize: screenSize)
                 ],
               ),
               DestinationHeading(screenSize: screenSize),

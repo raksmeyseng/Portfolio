@@ -4,7 +4,8 @@ class AppConstant {
   static const String appName = "Raksmey Seng";
 
   // The year that the app is first published
-  static const int copyRightYear = 2022;
+  static const String copyRight = "Copyright © 2022 Raksmey Seng";
+  static const String divider = "|";
 
   // Format Media ID
   static const String guid = '00000000-0000-0000-0000-000000000000';

@@ -20,13 +20,10 @@ ThemeData lightTheme(AppThemeOptions? themeOptions) {
     //==================================
     // Color Section
     //==================================
-    backgroundColor: AppColor.background,
     scaffoldBackgroundColor: AppColor.background,
     primaryColor: primary,
-    errorColor: AppColor.danger,
     secondaryHeaderColor: primary.withOpacity(.7),
     cardColor: AppColor.card,
-    bottomAppBarColor: AppColor.bottomAppBarLight,
     unselectedWidgetColor: Colors.grey,
     dividerColor: AppColor.divider,
     colorScheme: ColorScheme(
@@ -139,23 +136,23 @@ ThemeData lightTheme(AppThemeOptions? themeOptions) {
     textTheme: Typography.material2018(platform: defaultTargetPlatform)
         .black
         .copyWith(
-          bodyText1: const TextStyle(color: AppColor.textDark, fontSize: 14),
-          bodyText2: const TextStyle(color: AppColor.textDark, fontSize: 14),
-          caption: const TextStyle(color: AppColor.textLight, fontSize: 14),
+          bodyLarge: const TextStyle(color: AppColor.textDark, fontSize: 14),
+          bodyMedium: const TextStyle(color: AppColor.textDark, fontSize: 14),
+          bodySmall: const TextStyle(color: AppColor.textLight, fontSize: 14),
           // headline1: const TextStyle(color: AppColor.black, fontSize: 96),
           // headline2: const TextStyle(color: AppColor.black, fontSize: 60),
-          subtitle1: const TextStyle(
+          titleMedium: const TextStyle(
             color: AppColor.textDark,
             fontSize: 14,
             fontWeight: FontWeight.bold,
           ),
-          subtitle2: const TextStyle(
+          titleSmall: const TextStyle(
             color: AppColor.textDark,
             fontSize: 12,
             fontWeight: FontWeight.bold,
           ),
-          overline: const TextStyle(color: AppColor.textDark, fontSize: 10),
-          button: const TextStyle(color: AppColor.textDark, fontSize: 14),
+          labelSmall: const TextStyle(color: AppColor.textDark, fontSize: 10),
+          labelLarge: const TextStyle(color: AppColor.textDark, fontSize: 14),
         ),
 
     //==================================

@@ -1,9 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/config/themes/app_color.dart';
-import 'package:my_portfolio/constants/app_constant.dart';
-import 'package:my_portfolio/module/app/model/app_theme_options.dart';
 import 'package:my_portfolio/utils/helper/js/color_helper.dart';
+
+import '../../constants/app_constant.dart';
+import '../../module/app/model/app_theme_options.dart';
+import 'app_color.dart';
 
 ThemeData darkTheme(AppThemeOptions? themeOptions) {
   Color primary = AppColor.primary;
@@ -21,20 +22,17 @@ ThemeData darkTheme(AppThemeOptions? themeOptions) {
     //==================================
     // Color Section
     //==================================
-    backgroundColor: AppColor.backgroundDark,
     scaffoldBackgroundColor: AppColor.backgroundDark,
     primaryColor: primary,
-    errorColor: AppColor.danger,
     secondaryHeaderColor: primary.withOpacity(0.7),
     dividerColor: AppColor.dividerDark,
     cardColor: AppColor.cardDark,
-    bottomAppBarColor: AppColor.bottomAppBarDark,
     unselectedWidgetColor: Colors.grey,
     colorScheme: ColorScheme(
       primary: primary,
       secondary: AppColor.card,
       brightness: Brightness.dark,
-      background: AppColor.background,
+      background: AppColor.backgroundDark,
       error: AppColor.danger,
       onBackground: const Color(0xffB5BFD3),
       onError: AppColor.danger,
@@ -139,23 +137,23 @@ ThemeData darkTheme(AppThemeOptions? themeOptions) {
     ),
     textTheme:
         Typography.material2018(platform: defaultTargetPlatform).black.copyWith(
-              bodyText1: const TextStyle(color: Colors.white, fontSize: 14),
-              bodyText2: const TextStyle(color: AppColor.white, fontSize: 14),
-              caption: const TextStyle(color: Colors.white60, fontSize: 14),
+              bodyLarge: const TextStyle(color: Colors.white, fontSize: 14),
+              bodyMedium: const TextStyle(color: AppColor.white, fontSize: 14),
+              bodySmall: const TextStyle(color: Colors.white60, fontSize: 14),
               // headline1: const TextStyle(color: AppColor.white, fontSize: 96),
               // headline2: const TextStyle(color: AppColor.white, fontSize: 60),
-              subtitle1: const TextStyle(
+              titleMedium: const TextStyle(
                 color: AppColor.white,
                 fontSize: 14,
                 fontWeight: FontWeight.bold,
               ),
-              subtitle2: const TextStyle(
+              titleSmall: const TextStyle(
                 color: AppColor.white,
                 fontSize: 12,
                 fontWeight: FontWeight.bold,
               ),
-              overline: const TextStyle(color: AppColor.white, fontSize: 10),
-              button: const TextStyle(color: AppColor.white, fontSize: 14),
+              labelSmall: const TextStyle(color: Colors.white, fontSize: 10),
+              labelLarge: const TextStyle(color: AppColor.white, fontSize: 14),
             ),
     //==================================
     // Others

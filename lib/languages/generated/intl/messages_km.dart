@@ -22,8 +22,25 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "about": MessageLookupByLibrary.simpleMessage("About"),
         "app_name": MessageLookupByLibrary.simpleMessage("Raksmey Seng"),
+        "blog": MessageLookupByLibrary.simpleMessage("Blog"),
+        "brand_identity_design":
+            MessageLookupByLibrary.simpleMessage("Brand Identity Design"),
+        "contact": MessageLookupByLibrary.simpleMessage("Contact"),
+        "discover": MessageLookupByLibrary.simpleMessage("Discover"),
+        "faq": MessageLookupByLibrary.simpleMessage("FAQ\'S"),
         "lang_english": MessageLookupByLibrary.simpleMessage("English"),
-        "lang_khmer": MessageLookupByLibrary.simpleMessage("ភាសាខ្មែរ")
+        "lang_khmer": MessageLookupByLibrary.simpleMessage("ភាសាខ្មែរ"),
+        "privacy_policy":
+            MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+        "project": MessageLookupByLibrary.simpleMessage("Project"),
+        "resource": MessageLookupByLibrary.simpleMessage("Resource"),
+        "service": MessageLookupByLibrary.simpleMessage("Service"),
+        "term_condition":
+            MessageLookupByLibrary.simpleMessage("Terms and Conditions"),
+        "ux_research": MessageLookupByLibrary.simpleMessage("UX Research"),
+        "web_app_design":
+            MessageLookupByLibrary.simpleMessage("Web / App Design")
       };
 }

@@ -1,5 +1,18 @@
 {
     "app_name":"Raksmey Seng",
     "lang_khmer":"ភាសាខ្មែរ",
-    "lang_english":"English"
+    "lang_english":"English",
+    "discover":"Discover",
+    "about":"About",
+    "contact":"Contact",
+    "faq":"FAQ'S",
+    "brand_identity_design":"Brand Identity Design",
+    "ux_research":"UX Research",
+    "web_app_design":"Web / App Design",
+    "project":"Project",
+    "service":"Service",
+    "blog":"Blog",
+    "resource":"Resource",
+    "term_condition":"Terms and Conditions",
+    "privacy_policy":"Privacy Policy"
 }

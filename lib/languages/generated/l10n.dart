@@ -79,6 +79,136 @@ class S {
       args: [],
     );
   }
+
+  /// `Discover`
+  String get discover {
+    return Intl.message(
+      'Discover',
+      name: 'discover',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `About`
+  String get about {
+    return Intl.message(
+      'About',
+      name: 'about',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contact`
+  String get contact {
+    return Intl.message(
+      'Contact',
+      name: 'contact',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `FAQ'S`
+  String get faq {
+    return Intl.message(
+      'FAQ\'S',
+      name: 'faq',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Brand Identity Design`
+  String get brand_identity_design {
+    return Intl.message(
+      'Brand Identity Design',
+      name: 'brand_identity_design',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `UX Research`
+  String get ux_research {
+    return Intl.message(
+      'UX Research',
+      name: 'ux_research',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Web / App Design`
+  String get web_app_design {
+    return Intl.message(
+      'Web / App Design',
+      name: 'web_app_design',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Project`
+  String get project {
+    return Intl.message(
+      'Project',
+      name: 'project',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Service`
+  String get service {
+    return Intl.message(
+      'Service',
+      name: 'service',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blog`
+  String get blog {
+    return Intl.message(
+      'Blog',
+      name: 'blog',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resource`
+  String get resource {
+    return Intl.message(
+      'Resource',
+      name: 'resource',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Terms and Conditions`
+  String get term_condition {
+    return Intl.message(
+      'Terms and Conditions',
+      name: 'term_condition',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Privacy Policy`
+  String get privacy_policy {
+    return Intl.message(
+      'Privacy Policy',
+      name: 'privacy_policy',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

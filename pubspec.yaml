@@ -15,8 +15,8 @@ dependencies:
   # Translation
   intl: ^0.17.0
   # State management
-  flutter_bloc: ^8.1.1
-  bloc_concurrency: ^0.2.0
+  flutter_bloc: ^8.1.2
+  bloc_concurrency: ^0.2.1
   equatable: ^2.0.5
   # Manage application routing
   go_router: ^6.0.0
